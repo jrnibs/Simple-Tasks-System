@@ -1,16 +1,17 @@
 # Simple Tasks System
 
-A simple task management system built using PHP and MySQL to help you organize, manage, and track your tasks.
+A simple task management system built using PHP and MySQL to help users manage their tasks efficiently.
 
-## Features
-- **User Authentication**: Register and log in to manage your tasks.
-- **Task Creation**: Create new tasks with titles, descriptions, and deadlines.
-- **Task Editing**: Update task details or change their status.
-- **Task Deletion**: Remove tasks from your list.
-- **Task Filtering**: View tasks by their status (Pending, Completed).
-- **Responsive Design**: Accessible on both desktop and mobile.
+## 🚀 Features
 
-## Screenshots
+- ✅ User Registration and Login
+- 📝 Create, Edit, Delete Tasks
+- 📌 Task Status: Pending & Completed
+- 📅 Automatic Timestamps for Task Creation/Updates
+- 📱 Responsive UI using Bootstrap
+- 🔐 Session-Based Authentication
+
+## 📸 Screenshots
 
 ![image](https://github.com/user-attachments/assets/5bc230d9-1a9a-4f59-9832-40a933c5995e)
 ![image](https://github.com/user-attachments/assets/a28ba235-8476-4022-a23f-6c54372a38c8)
@@ -83,12 +84,13 @@ Before setting up the system, ensure you have the following installed on your sy
 4. **Edit or Delete Tasks**: You can edit the task details or delete them if no longer needed.
 5. **Mark as Completed**: You can change the status of tasks to "Completed" once done.
 
-### Setup
-
-This project is open-source and available under the MIT License.
-
 ### Acknowledgements
 
 - **PHP** The server-side scripting language used to build this project.
 - **MYSQL** Database for storing user and task data.
 - **Bootstrap** Front-end framework for responsive design.
+
+### Contributing
+
+Contributions are welcome! Please fork this repository, create a new branch, and submit a pull request with your proposed changes.
+
