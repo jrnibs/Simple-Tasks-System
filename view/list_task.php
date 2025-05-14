@@ -149,7 +149,7 @@ $task = new Task();
                             <!-- "Complete" Button -->
                             <?php if ($task_row['status'] != 1){ ?>
                             <a href="../controller/action_task.php?status=1&&complete=<?php echo $task_row['id']; ?>" class="btn btn-info badge">
-                                <i class="fas fa-check"></i> Complete
+                                <i class="fas fa-check"></i> Pending..
                             </a>
                             <?php }else{ ?>
                             <span class="badge bg-success">Completed</span>
