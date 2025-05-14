@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd; /* Bootstrap primary */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body.img-bg {
+    background: #fdf6e3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.welcome-heading h1,
+.welcome-heading h2 {
+    margin-bottom: 15px;
+}
+
+body.img-bg {
+    background: #fdf6e3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sticky-note {
+    width: 240px;
+    height: 240px;
+    padding: 15px;
+    margin: 15px auto;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid #f0e68c;
+    border-radius: 6px;
+    position: relative;
+    transform: rotate(-2deg);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sticky-note:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.note-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.note-content {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    color: #555;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sticky-footer {
+    font-size: 0.75rem;
+    text-align: right;
+    color: #666;
+}
+
+.task-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.task-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.task-actions .btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #333;
+}
+
+.task-actions .btn:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu {
+    font-size: 0.85rem;
+}
+
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #ffe28a;
+    border-bottom: 1px solid #e5c76b;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-primary, .btn-warning, .btn-danger, .btn-secondary {
+    border-radius: 20px;
+}
+
+.table thead th {
+    background-color: #fceabb;
+    color: #333;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #fff8dc;
+}
+
+table .badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.card.border-primary {
+    background-color: #fffec8;
+    border-left: 6px solid #ffdb58;
+}
+
+.pin-logout {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Pin "needle" */
+.pin-logout::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 1px;
+}
+
+/* Tooltip in front (appears on hover) */
+.pin-logout::before {
+    content: 'Logout';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.pin-logout:hover::before {
+    opacity: 1;
+}
+
+.pin-logout:hover {
+    transform: scale(1.2);
+}
