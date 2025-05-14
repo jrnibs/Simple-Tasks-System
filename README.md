@@ -42,7 +42,6 @@ Before setting up the system, ensure you have the following installed on your sy
    - Import the database schema (usually in a .sql file) to create the necessary tables.
    - Alternatively, you can create the tables manually with the following SQL queries:
  ```sql
- 
    CREATE TABLE tbl_users (
       id INT AUTO_INCREMENT PRIMARY KEY,
       username VARCHAR(100) NOT NULL,
