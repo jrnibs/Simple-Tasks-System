@@ -41,7 +41,7 @@ Before setting up the system, ensure you have the following installed on your sy
    - Create a MySQL database for the application.
    - Import the database schema (usually in a .sql file) to create the necessary tables.
    - Alternatively, you can create the tables manually with the following SQL queries:
- ```sql
+ ``` sql
    CREATE TABLE tbl_users (
       id INT AUTO_INCREMENT PRIMARY KEY,
       username VARCHAR(100) NOT NULL,
@@ -59,7 +59,7 @@ Before setting up the system, ensure you have the following installed on your sy
 
 4. Configure your environment:
    - Update the database.php or .env file with your database credentials:
-```php
+``` bash
     private $host = 'localhost';
     private $db_name = 'your_db_name';
     private $username = 'your_db_username';
