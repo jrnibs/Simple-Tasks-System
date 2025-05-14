@@ -17,6 +17,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             exit();
         }
     }
+
+    if(isset($_POST['register'])){
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $status = 1;
+
+        if($user->addUser($fname,$lname,$username,$password,$address, $email, $status)){
+            header('location: ../index.php?success=Registration successful');
+            exit();
+        }else {
+            header('location: ../index.php?error=Registration failed');
+            exit();
+        }
+    }
 }
 
 ?>

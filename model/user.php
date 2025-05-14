@@ -63,6 +63,7 @@ class User {
         $stmt->bind_param("i", $id);
         return $stmt->execute();
     }
+    
 
 
 }

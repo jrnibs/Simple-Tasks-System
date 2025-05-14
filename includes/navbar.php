@@ -13,7 +13,10 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
         <a class="nav-link active" href="home.php">🏠 Home</a>
+
+        <?php if($user_login['username'] === 'admin'){ ?>
         <a class="nav-link" href="list_user.php">👥 Users</a>
+        <?php } ?>
         <a class="nav-link" href="list_task.php">📋 Tasks</a>
       </div>
 

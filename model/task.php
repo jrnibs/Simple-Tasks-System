@@ -14,6 +14,13 @@ class Task{
         $result = $this->conn->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getAllTasksByUserId($user_id){
+        $query = "SELECT * FROM tbl_task WHERE user_id = ? ORDER BY id DESC";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
 
     public function getTaskById($id){
         $query = "SELECT * FROM tbl_task WHERE id = ?";
@@ -52,19 +59,21 @@ class Task{
     }
 
     //filter task by date timestamp
-    public function filterTaskByDate($date){
-        $query = "SELECT * FROM tbl_task WHERE date_created = ?";
+    public function filterTaskByDate($date, $user_id){
+        $query = "SELECT * FROM tbl_task WHERE date_created = ? AND user_id = ?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("s", $date);
+        $stmt->bind_param("si", $date,$user_id);
         $stmt->execute();
         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
     //get completed task
-    public function getCompletedTask(){
-        $query = "SELECT * FROM tbl_task WHERE status = 1";
-        $result = $this->conn->query($query);
-        return $result->fetch_all(MYSQLI_ASSOC);
+    public function getCompletedTask($user_id){
+        $query = "SELECT * FROM tbl_task WHERE status = 0 AND user_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
 }

@@ -76,12 +76,12 @@ $task = new Task();
             
                 <?php 
                 if (isset($_GET['filter']) && $_GET['filter'] === 'completed') {
-                    $tasks = $task->getCompletedTask(); // You need to implement this in your model
+                    $tasks = $task->getCompletedTask($user_login['user_id']); // You need to implement this in your model
                     echo "<h4 class='text-center'>Showing Completed Tasks</h4>";
 
                 } elseif (isset($_GET['date'])){
                     $date = $_GET['date'];
-                    $tasks = $task->filterTaskByDate($date);
+                    $tasks = $task->filterTaskByDate($date,$user_login['user_id']);
 
                     $date_fr = new DateTime($date);
                     // Format the date and time
@@ -95,7 +95,7 @@ $task = new Task();
                     
 
                 }else{
-                    $tasks = $task->getAllTasks();
+                    $tasks = $task->getAllTasksByUserId($user_login['user_id']);
                 }
 
                 foreach($tasks as $task_row){ 
@@ -106,7 +106,6 @@ $task = new Task();
                     ?>
                 <div class="col-sm-12 col-md-4 col-lg-2 mb-3">
                     <div class="sticky-note" style="background-color: <?php echo htmlspecialchars($color); ?>; border-left: 8px solid <?php echo htmlspecialchars($color); ?>;">
-                    <small>Color: <?php echo htmlspecialchars($color); ?></small>
 
                     <div class="task-actions dropdown">
                         <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
