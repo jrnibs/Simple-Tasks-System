@@ -12,7 +12,12 @@ A simple task management system built using PHP and MySQL to help you organize, 
 
 ## Screenshots
 
-_Add some screenshots of your application here._
+![image](https://github.com/user-attachments/assets/5bc230d9-1a9a-4f59-9832-40a933c5995e)
+![image](https://github.com/user-attachments/assets/a28ba235-8476-4022-a23f-6c54372a38c8)
+![image](https://github.com/user-attachments/assets/32fbe1cf-cfeb-43a7-8663-e8f8231b4d67)
+![image](https://github.com/user-attachments/assets/552ad6d2-c8b4-4342-845b-89006056b54f)
+
+
 
 ## Installation
 
@@ -72,11 +77,11 @@ Before setting up the system, ensure you have the following installed on your sy
 
 ## Usage
 
-1. **Registration **: Register for an account to start managing tasks.
-2. **Login **: Use your credentials to log in to the system.
-3. **Create Tasks **: Once logged in, you can create new tasks with details such as title, description, and due date.
-4. **Edit or Delete Tasks **: You can edit the task details or delete them if no longer needed.
-5. **Mark as Completed **: You can change the status of tasks to "Completed" once done.
+1. **Registration**: Register for an account to start managing tasks.
+2. **Login**: Use your credentials to log in to the system.
+3. **Create Tasks**: Once logged in, you can create new tasks with details such as title, description, and due date.
+4. **Edit or Delete Tasks**: You can edit the task details or delete them if no longer needed.
+5. **Mark as Completed**: You can change the status of tasks to "Completed" once done.
 
 ### Setup
 
@@ -84,6 +89,6 @@ This project is open-source and available under the MIT License.
 
 ### Acknowledgements
 
-- **PHP ** The server-side scripting language used to build this project.
-- **MYSQL ** Database for storing user and task data.
-- **Bootstrap ** Front-end framework for responsive design.
+- **PHP** The server-side scripting language used to build this project.
+- **MYSQL** Database for storing user and task data.
+- **Bootstrap** Front-end framework for responsive design.
