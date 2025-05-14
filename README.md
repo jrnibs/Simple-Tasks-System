@@ -38,36 +38,37 @@ Before setting up the system, ensure you have the following installed on your sy
    cd Simple-Tasks-System
 
 3. Set up your database:
-   - Create a MySQL database for the application.
-   - Import the database schema (usually in a .sql file) to create the necessary tables.
-   - Alternatively, you can create the tables manually with the following SQL queries:
- ``` sql
+   
+- Create a MySQL database for the application.
+- Import the database schema (usually in a .sql file) to create the necessary tables.
+- Alternatively, you can create the tables manually with the following SQL queries:
+   ``` sql
    CREATE TABLE tbl_users (
       id INT AUTO_INCREMENT PRIMARY KEY,
       username VARCHAR(100) NOT NULL,
       password VARCHAR(255) NOT NULL
-    );
+   );
     
-    CREATE TABLE tbl_tasks (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        title VARCHAR(255) NOT NULL,
-        description TEXT,
-        status ENUM('Pending', 'Completed') DEFAULT 'Pending',
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    );
+   CREATE TABLE tbl_tasks (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     title VARCHAR(255) NOT NULL,
+     description TEXT,
+     status ENUM('Pending', 'Completed') DEFAULT 'Pending',
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+   );
 
 4. Configure your environment:
-   - Update the database.php or .env file with your database credentials:
-``` bash
-    private $host = 'localhost';
-    private $db_name = 'your_db_name';
-    private $username = 'your_db_username';
-    private $password = 'your_db_password';
+- Update the database.php or .env file with your database credentials:
+   ``` bash
+   private $host = 'localhost';
+   private $db_name = 'your_db_name';
+   private $username = 'your_db_username';
+   private $password = 'your_db_password';
 
 5. Run the application:
-  - If you're using Apache or Nginx, place the project in your htdocs (Apache) or www (Nginx) directory.
-  - Open your browser and navigate to http://localhost/your-project-folder/
+- If you're using Apache or Nginx, place the project in your htdocs (Apache) or www (Nginx) directory.
+- Open your browser and navigate to http://localhost/your-project-folder/
 
 ## Usage
 
