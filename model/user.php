@@ -11,7 +11,7 @@ class User {
     }
 
     public function login($username, $password) {
-        $sql = "SELECT * FROM tbl_user WHERE username = ? AND password = ?";
+        $sql = "SELECT * FROM tbl_user WHERE username = ? AND password = ? AND active = 1";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
@@ -63,7 +63,7 @@ class User {
         $stmt->bind_param("i", $id);
         return $stmt->execute();
     }
-    
+
 
 
 }
