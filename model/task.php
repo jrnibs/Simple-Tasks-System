@@ -69,7 +69,7 @@ class Task{
 
     //get completed task
     public function getCompletedTask($user_id){
-        $query = "SELECT * FROM tbl_task WHERE status = 0 AND user_id = ?";
+        $query = "SELECT * FROM tbl_task WHERE status = 1 AND user_id = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
