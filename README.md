@@ -50,18 +50,25 @@ Before setting up the system, ensure you have the following installed on your sy
 - Alternatively, you can create the tables manually with the following SQL queries:
    ``` sql
    CREATE TABLE tbl_users (
-      id INT AUTO_INCREMENT PRIMARY KEY,
-      username VARCHAR(100) NOT NULL,
-      password VARCHAR(255) NOT NULL
-   );
+      `user_id` int(11) NOT NULL,
+      `fname` varchar(255) NOT NULL,
+      `lname` varchar(255) NOT NULL,
+      `username` varchar(255) NOT NULL,
+      `password` varchar(255) NOT NULL,
+      `address` text NOT NULL,
+      `email` varchar(255) NOT NULL,
+      `active` int(11) NOT NULL,
+      `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+      );
     
    CREATE TABLE tbl_tasks (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     title VARCHAR(255) NOT NULL,
-     description TEXT,
-     status ENUM('Pending', 'Completed') DEFAULT 'Pending',
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+     `id` INT AUTO_INCREMENT PRIMARY KEY,
+     `user_id` int(11) NOT NULL,
+     `title` varchar(255) NOT NULL,
+     `description` text NOT NULL,
+     `status` int(11) NOT NULL,
+     `color` text NOT NULL,
+     `date_created` date NOT NULL DEFAULT current_timestamp()
    );
 
 4. Configure your environment:
