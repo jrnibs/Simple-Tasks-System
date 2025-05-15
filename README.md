@@ -13,19 +13,19 @@ A simple task management system built using PHP and MySQL to help users manage t
 
 ## 📸 Screenshots
 
-Login
+- **Login**
 ![image](https://github.com/user-attachments/assets/953b8a55-e4d0-4eb8-ac86-e63fbe6f0f3c)
 
-Registration
+- **Registration**
 ![image](https://github.com/user-attachments/assets/c2dfad78-784b-4e3e-b94c-32931e02eed8)
 
-Homepage
+- **Homepage**
 ![image](https://github.com/user-attachments/assets/a28ba235-8476-4022-a23f-6c54372a38c8)
 
-Task Management
+- **Task Management**
 ![image](https://github.com/user-attachments/assets/32fbe1cf-cfeb-43a7-8663-e8f8231b4d67)
 
-User Management
+- **User Management**
 ![image](https://github.com/user-attachments/assets/552ad6d2-c8b4-4342-845b-89006056b54f)
 
 
